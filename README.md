@@ -11,13 +11,13 @@ This repository demonstrates various control system projects implemented on an A
 
 ### DC Motor Control
 - **Rotator.ino:**  
-  Simple 5-second sequences for motor rotations (CCW, stop, CW) using the DRV8837 driver.
+  5 second sequences for motor rotations (CCW, stop, CW) using the DRV8837 driver.
 - **Dynamic Motor Control Based on Potentiometer Input:**  
   The motor's direction and speed are adjusted depending on the analog voltage measured.
 
 ### Sensor Integration
 - **ReadDistanceMotor.ino:**  
-  Uses a VL53L4CD distance sensor to adjust motor speed according to the measured distance.
+  A VL53L4CD distance sensor is used to adjust motor speed according to the measured distance.
 - Sensor data is visualized using the Arduino Serial Plotter.
 
 ### Encoder Feedback & RPM Measurement
@@ -26,6 +26,14 @@ This repository demonstrates various control system projects implemented on an A
 
 ### Arduino Serial Parsers
 - **serislParser-task1.ino:**  
-  A simple parser that reads a newline-terminated ASCII string to update LED brightness.
+  A simple parser that reads a newline terminated ASCII string to update LED brightness.
 - **serislParser-task2.ino:**  
   An advanced parser that splits an input string (using commas as delimiters) into multiple brightness values for three LEDs.
+  
+## Closed‑Loop Control
+- **PositionControlCloseLoop.ino**: PI loop (100 Hz) to reach a target angle via serial input.  
+- **VelocityControlCloseLoop.ino**: LPF and PI loop (100 Hz) to track target RPM (set by potentiometer).
+
+## Python–Arduino Communication
+- Arduino outputs JSON formatted sensor data every 10 ms.  
+- Python script (pyserial + matplotlib) logs incoming JSON to file and live plots it.
