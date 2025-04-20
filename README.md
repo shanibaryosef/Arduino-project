@@ -30,10 +30,10 @@ This repository demonstrates various control system projects implemented on an A
 - **serislParser-task2.ino:**  
   An advanced parser that splits an input string (using commas as delimiters) into multiple brightness values for three LEDs.
   
-## Closed‑Loop Control
+### Closed‑Loop Control
 - **PositionControlCloseLoop.ino**: PI loop (100 Hz) to reach a target angle via serial input.  
 - **VelocityControlCloseLoop.ino**: LPF and PI loop (100 Hz) to track target RPM (set by potentiometer).
 
-## Python–Arduino Communication
+### Python–Arduino Communication
 - Arduino outputs JSON formatted sensor data every 10 ms.  
 - Python script (pyserial + matplotlib) logs incoming JSON to file and live plots it.
